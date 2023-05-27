@@ -32,7 +32,7 @@ func Update(w http.ResponseWriter, r *http.Request) {
 	rows, err := models.Update(int64(id), todo)
 
 	if err != nil {
-		log.Printf("Erro ao atualizar resgistro: %v", err)
+		log.Printf("Erro ao atualizar registro: %v", err)
 		http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)
 		return
 	}
