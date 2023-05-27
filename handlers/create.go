@@ -27,12 +27,12 @@ func Create(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		resp = map[string]any{
 			"Error":   true,
-			"message": fmt.Sprintf("Ocorreu um erro ao tentar inserir: %v", err),
+			"Message": fmt.Sprintf("Ocorreu um erro ao tentar inserir: %v", err),
 		}
 	} else {
 		resp = map[string]any{
 			"Error":   false,
-			"message": fmt.Sprintf("Todo inserido com sucesso! ID: %v", id),
+			"Message": fmt.Sprintf("Todo inserido com sucesso! ID: %v", id),
 		}
 	}
 
